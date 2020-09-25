@@ -8,4 +8,9 @@ public class Data {
     public String getValor() {
         return valor;
     }
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return valor;
+    }
 }

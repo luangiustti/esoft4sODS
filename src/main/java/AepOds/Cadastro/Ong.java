@@ -1,5 +1,8 @@
 package AepOds.Cadastro;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import AepOds.Cadastro.ValueObject.Cnpj;
 import AepOds.Cadastro.ValueObject.NomeFantasia;
 import AepOds.Cadastro.ValueObject.Senha;
@@ -12,15 +15,19 @@ public class Ong {
     private String descrição;
     private Endereço endereço;
     private String telefone;
-    
+    private List<Produto> produtos = new ArrayList<>();
+
     public Ong(String email, Senha senha, Cnpj cnpj, NomeFantasia nomeFantasia, String descrição, Endereço endereço, String telefone){
         this.telefone = telefone;
         this.email = email;
-        this.senha.getValor();
-        this.cnpj.getValor();
-        this.nomeFantasia.getValor();
+        this.senha = senha;
+        this.cnpj = cnpj;
+        this.nomeFantasia = nomeFantasia;
         this.descrição = descrição;
-        this.endereço.toString();
+        this.endereço = endereço;
+    }
+    public void addprodutos(Produto novoProduto){
+        this.produtos.add(novoProduto);
     }
     public Cnpj getCnpj() {
         return cnpj;

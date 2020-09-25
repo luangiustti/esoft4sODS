@@ -11,9 +11,9 @@ public class Mercado {
     private Endereço endereço;
     public Mercado(NomeFantasia nomeFantasia, Cnpj cnpj, String url, String telefone, Endereço endereço){
         this.telefone = telefone;
-        this.nomeFantasia.getValor();
-        this.cnpj.getValor();
-        this.endereço.toString();
+        this.nomeFantasia = nomeFantasia;
+        this.cnpj = cnpj;
+        this.endereço = endereço;
         this.url = url; 
     }
     public Cnpj getCnpj() {

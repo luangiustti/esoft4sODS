@@ -8,6 +8,11 @@ public class Cpf {
     public String getValor() {
         return valor;
     }
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return valor;
+    }
     public static boolean validar(String valor){
         if (valor.length() != 11){
             return false;

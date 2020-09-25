@@ -6,10 +6,15 @@ public class Cnpj {
         if(validar(valor)){
             this.valor = valor;           
         }
-        throw new RuntimeException("CNPJ invalido");
+       // throw new RuntimeException("CNPJ invalido");
     }
 
     public String getValor() {
+        return valor;
+    }
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
         return valor;
     }
 
