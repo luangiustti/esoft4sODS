@@ -5,4 +5,7 @@ public class Data {
     public Data (String valor){
         this.valor = valor;
     }
+    public String getValor() {
+        return valor;
+    }
 }
