@@ -1,23 +1,13 @@
-package JoaoCarvalho.aula20200903.valueObjects;
-
+package AepOds.Cadastro.ValueObject;
 
 public class Cpf {
     private String valor;
     public Cpf (String valor){
-        if(validar(valor) == false){
-            throw new RuntimeException("CPF invalido");
-        }
-        this.valor = valor;    
+        this.valor = valor;
     }
     public String getValor() {
         return valor;
     }
-
-    @Override
-    public String toString() {
-        return valor;
-    }
-    
     public static boolean validar(String valor){
         if (valor.length() != 11){
             return false;
