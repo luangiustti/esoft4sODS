@@ -7,7 +7,7 @@ import AepOds.Cadastro.ValueObject.Cnpj;
 import AepOds.Cadastro.ValueObject.NomeFantasia;
 import AepOds.Cadastro.ValueObject.Senha;
 
-public class Ong {
+public class Ong extends Papel {
     private String email;
     private Senha senha;
     private Cnpj cnpj;
@@ -18,6 +18,7 @@ public class Ong {
     private List<Produto> produtos = new ArrayList<>();
 
     public Ong(String email, Senha senha, Cnpj cnpj, NomeFantasia nomeFantasia, String descrição, Endereço endereço, String telefone){
+        super();
         this.telefone = telefone;
         this.email = email;
         this.senha = senha;
@@ -49,5 +50,8 @@ public class Ong {
     }
     public String getTelefone() {
         return telefone;
+    }
+    public List<Produto> getProdutos() {
+        return produtos;
     }
 }

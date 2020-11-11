@@ -3,13 +3,14 @@ package AepOds.Cadastro;
 import AepOds.Cadastro.ValueObject.Cnpj;
 import AepOds.Cadastro.ValueObject.NomeFantasia;
 
-public class Mercado {
+public class Mercado extends Papel {
     private NomeFantasia nomeFantasia;
     private Cnpj cnpj;
     private String url;
     private String telefone;
     private Endereço endereço;
     public Mercado(NomeFantasia nomeFantasia, Cnpj cnpj, String url, String telefone, Endereço endereço){
+        super();
         this.telefone = telefone;
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;

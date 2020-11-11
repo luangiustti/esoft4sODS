@@ -6,18 +6,21 @@ import AepOds.Cadastro.ValueObject.Email;
 import AepOds.Cadastro.ValueObject.Nome;
 import AepOds.Cadastro.ValueObject.Senha;
 
-public class Usuário {
+public class Usuário extends Papel {
     private Nome nome;
-    private String email;
+    private Email email;
     private Senha senha;
     private Cpf cpf;
     private Data data;
     private Endereço endereço;
+    private String telefone;
 
-    public Usuário(Nome nome, Cpf cpf, Data data, Endereço endereço,String email, Senha senha){
+    public Usuário(Nome nome, Cpf cpf, Data data, String telefone, Endereço endereço,Email email, Senha senha){
+        super();
         this.nome = nome;
         this.cpf = cpf;
         this.data = data;
+        this.telefone = telefone;
         this.endereço = endereço;
         this.email = email;
         this.senha = senha;
@@ -28,7 +31,10 @@ public class Usuário {
     public Data getData() {
         return data;
     }
-    public String getEmail() {
+    public String getTelefone() {
+        return telefone;
+    }
+    public Email getEmail() {
         return email;
     }
     public Endereço getEndereço() {

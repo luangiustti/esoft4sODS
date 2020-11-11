@@ -1,6 +1,6 @@
 package AepOds.Cadastro;
 
-public class Endereço {
+public class Endereço extends Papel {
     private String estado;
     private String cidade;
     private String bairro;
@@ -9,6 +9,7 @@ public class Endereço {
     private String complemento;
 
     public Endereço(String estado, String cidade, String bairro, String logradouro, String número, String complemento) {
+        super();
         if(validar(estado)){
             this.estado = estado;
         }else{

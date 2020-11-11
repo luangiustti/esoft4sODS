@@ -1,20 +1,18 @@
 package AepOds.Cadastro;
 
-public class Produto {
+public class Produto extends Papel {
     private String Nome;
-    private String Descrição;
-    public Produto(String Nome, String Descrição){
+
+    public Produto(String Nome){
+        super();
         this.Nome = Nome;
-        this.Descrição = Descrição;
-    }
-    public String getDescrição() {
-        return Descrição;
+
     }
     public String getNome() {
         return Nome;
     }
     @Override
     public String toString() {
-        return Nome + Descrição;
+        return Nome;
     }
 }
