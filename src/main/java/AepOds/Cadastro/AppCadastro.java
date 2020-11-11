@@ -23,19 +23,19 @@ public class AppCadastro {
             Endereço supermercadoCoEndereço = new Endereço("pr", "Maingá", "zona 7", "av. Paraná", "1600", "mercado");
             Endereço ongMundoMelhEndereço = new Endereço("pr", "Maringá", "jardim imperial 2", "chihiro nakatani", "610", "ong");
             
-            cadastro.incluirEndereco(unicesumarEndereço);
-            cadastro.incluirEndereco(supermercadoCoEndereço);
-            cadastro.incluirEndereco(ongMundoMelhEndereço);
+          //  cadastro.incluirEndereco(unicesumarEndereço);
+          //  cadastro.incluirEndereco(supermercadoCoEndereço);
+          //  cadastro.incluirEndereco(ongMundoMelhEndereço);
 
             Produto arroz = new Produto("Arroz");
             Produto feijao = new Produto("Feijão");
             Produto oleo = new Produto("Oléo");
 
-            cadastro.incluirProduto(arroz);
-            cadastro.incluirProduto(feijao);
-            cadastro.incluirProduto(oleo);
+          //  cadastro.incluirProduto(arroz);
+          //  cadastro.incluirProduto(feijao);
+          //  cadastro.incluirProduto(oleo);
 
-            Mercado condorMercado = new Mercado(new NomeFantasia("Supermercados condor"), new Cnpj("47409319000139"), "https://www.condor.com.br/", "0800416655", supermercadoCoEndereço);
+            Mercado condorMercado = new Mercado(new NomeFantasia("Supermercados condor"), new Cnpj("47409319000139"), "https://www.condor.com.br/", "08004166551", supermercadoCoEndereço);
             
             cadastro.incluirMercado(condorMercado);
             
@@ -48,7 +48,7 @@ public class AppCadastro {
             
             Usuário uncesumarUsuário = new Usuário(new Nome("Wilson mattos"), new Cpf("54694022075"), new Data("19/05/1998"), "44998989898",  unicesumarEndereço, new Email("wilson@unicesumar"), new Senha("12345unicesumar"));        
                 
-            cadastro.incluirUsuario(uncesumarUsuário);
+           // cadastro.incluirUsuario(uncesumarUsuário);
 
         } catch (Exception e) {
             e.printStackTrace();

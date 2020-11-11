@@ -98,7 +98,7 @@ public class RepositórioDeCadastroJDBC implements RepositórioDeCadastro{
             throw new RuntimeException(e);
         }
     }
-
+/*
     @Override
     public void incluirEndereco (Endereço novo) {
         try {
@@ -126,9 +126,9 @@ public class RepositórioDeCadastroJDBC implements RepositórioDeCadastro{
     public void incluirUsuario(Usuário novo) {
         try {
             if (insert == null) {
-                insert = conexão.prepareStatement("insert into usuario("+
-                "ID_USUARIO, NOME_USUARIO, CPF_USUARIO, DATA_NASC, TELEFONE_USUARIO, EMAIL_USUARIO, SENHA_USUARIO, ID_ENDERECO_USUARIO)"+
-                "values (?,?,?,?,?,?,?,?)");
+                insert = conexão.prepareStatement("insert into usuario ("+
+                "ID_USUARIO, NOME_USUARIO, CPF_USUARIO, DATA_NASC_USUARIO, TELEFONE_USUARIO, EMAIL_USUARIO, SENHA_USUARIO, ID_ENDERECO_USUARIO)"+
+                " values (?,?,?,?,?,?,?,?)");
             }
             insert.setString(1, novo.getId());
             insert.setString(2, novo.getNome().toString());
@@ -145,18 +145,19 @@ public class RepositórioDeCadastroJDBC implements RepositórioDeCadastro{
             throw new RuntimeException(e);
         }
     }
-
+*/
     @Override
     public void incluirMercado(Mercado novo) {
+        
         try {
             if (insert == null) {
                 insert = conexão.prepareStatement("insert into mercado ("+
                 "ID_MERCADO, CNPJ_MERCADO, NOME_FANTASIA_MERCADO, TELEFONE_MERCADO, URL_MERCADO, ID_ENDERECO_MERCADO)"+
-                "values(?,?,?,?,?,?)");
+                " values (?,?,?,?,?,?)");
             }
             insert.setString(1, novo.getId());
-            insert.setString(2, novo.getCnpj().toString());
-            insert.setString(3, novo.getNomeFantasia().toString());
+            insert.setString(2, novo.getCnpj().getValor());
+            insert.setString(3, novo.getNomeFantasia().getValor());
             insert.setString(4, novo.getTelefone());
             insert.setString(5, novo.getUrl());
             insert.setString(6, novo.getEndereço().getId());

@@ -8,8 +8,8 @@ import AepOds.Cadastro.Usuário;
 
 public interface RepositórioDeCadastro extends AutoCloseable {
     
-    void incluirEndereco(Endereço novo);
-    void incluirUsuario(Usuário novo);
+    //void incluirEndereco(Endereço novo);
+   // void incluirUsuario(Usuário novo);
     void incluirMercado(Mercado novo);
     void incluirProduto(Produto novo);
     void incluirOng(Ong novo);
