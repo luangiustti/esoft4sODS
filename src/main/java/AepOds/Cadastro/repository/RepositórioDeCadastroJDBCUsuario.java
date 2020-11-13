@@ -22,7 +22,7 @@ public class RepositórioDeCadastroJDBCUsuario implements RepositórioDeCadastro
                 "ID_USUARIO CHAR(36) CONSTRAINT ID_USUARIO_NN NOT NULL,"+
                 "NOME_USUARIO VARCHAR(30),"+
                 "CPF_USUARIO CHAR(11) CONSTRAINT CPF_USUARIO_NN NOT NULL,"+
-                "DATA_NASC_USUARIO VARCHAR(11),"+
+                "DATA_NASC_USUARIO VARCHAR(50),"+
                 "TELEFONE_USUARIO CHAR(11),"+
                 "EMAIL_USUARIO VARCHAR(50) CONSTRAINT EMAIL_USUARIO_NN NOT NULL,"+
                 "SENHA_USUARIO VARCHAR(30),"+

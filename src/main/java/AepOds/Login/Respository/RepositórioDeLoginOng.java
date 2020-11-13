@@ -2,8 +2,8 @@ package AepOds.Login.Respository;
 
 import java.util.List;
 
-import AepOds.Login.Login;
+import AepOds.Login.DadosDeLogin;
 
 public interface RepositórioDeLoginOng extends AutoCloseable {
-    List<Login> obterTodas();
+    List<DadosDeLogin> obterTodas();
 }

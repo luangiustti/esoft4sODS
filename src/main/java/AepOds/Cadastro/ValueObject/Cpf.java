@@ -3,6 +3,9 @@ package AepOds.Cadastro.ValueObject;
 public class Cpf {
     private String valor;
     public Cpf (String valor){
+        if (!validar(valor)) {
+            throw new RuntimeException("CPF invalido!");
+        }
         this.valor = valor;
     }
     public String getValor() {
@@ -10,7 +13,6 @@ public class Cpf {
     }
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return valor;
     }
     public static boolean validar(String valor){

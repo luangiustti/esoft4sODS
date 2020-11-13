@@ -47,18 +47,20 @@ public class AppCadastro {
 
             Mercado condorMercado = new Mercado(new NomeFantasia("Supermercados condor"), new Cnpj("47409319000139"), "https://www.condor.com.br/", "08004166551", supermercadoCoEndereço);
             
-            cadastroMercado.incluirMercado(condorMercado);
+            //cadastroMercado.incluirMercado(condorMercado);
 
             Ong mundoMelhorOng = new Ong("mundomelhor@mundo.com", new Senha("ongong@1234"), new Cnpj("72470628000161"), new NomeFantasia("Mundo melhor"), " É UMA ORGANIZAÇÃO NÃO GOVERNAMENTAL DESTINADA A AJUDAR PESSOAS M SITUAÇÃO DE FOME", ongMundoMelhEndereço, "44999986950");
             mundoMelhorOng.addprodutos(arroz);
             mundoMelhorOng.addprodutos(feijao);
             mundoMelhorOng.addprodutos(oleo);
             
-            cadastroOng.incluirOng(mundoMelhorOng);
+            //cadastroOng.incluirOng(mundoMelhorOng);
             
-            Usuário uncesumarUsuário = new Usuário(new Nome("Wilson mattos"), new Cpf("54694022075"), new Data("19/05/1998"), "44998989898",  unicesumarEndereço, new Email("wilson@unicesumar"), new Senha("12345unicesumar"));        
-                
+            Usuário uncesumarUsuário = new Usuário(new Nome("Wilson mattos"), new Cpf("17012213060"), new Data("19/05/1998"), "44998989898",  unicesumarEndereço, new Email("wilson@unicesumar"), new Senha("12345unicesumar"));        
+            Usuário joaoPaulo = new Usuário(new Nome("joao paulo"), new Cpf("04529447910"), new Data("27/07/2001"), "44995959595", unicesumarEndereço, new Email("joaopaulo@gmail.com"), new Senha("123456789"));
+            
             cadastroUsuario.incluirUsuario(uncesumarUsuário);
+            //cadastroUsuario.incluirUsuario(joaoPaulo);
 
         } catch (Exception e) {
             e.printStackTrace();

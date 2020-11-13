@@ -3,10 +3,10 @@ package AepOds.Cadastro.ValueObject;
 public class Cnpj {
     private String valor;
     public Cnpj(String valor){
-        if(validar(valor)){
-            this.valor = valor;           
+        if(!validar(valor)){
+            throw new RuntimeException("CNPJ invalido");           
         }
-       // throw new RuntimeException("CNPJ invalido");
+        this.valor = valor;
     }
 
     public String getValor() {
@@ -14,7 +14,6 @@ public class Cnpj {
     }
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return valor;
     }
 

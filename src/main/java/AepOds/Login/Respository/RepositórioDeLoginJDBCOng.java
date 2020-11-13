@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import AepOds.Login.Login;
+import AepOds.Login.DadosDeLogin;
 
 public class RepositórioDeLoginJDBCOng implements RepositórioDeLoginOng {
     private Connection conexão;
@@ -16,14 +16,14 @@ public class RepositórioDeLoginJDBCOng implements RepositórioDeLoginOng {
     }
 
     @Override
-    public List<Login> obterTodas() {
-        List<Login> todas = new ArrayList<>();
+    public List<DadosDeLogin> obterTodas() {
+        List<DadosDeLogin> todas = new ArrayList<>();
         try (Statement select = conexão.createStatement();
-            ResultSet resultado = select.executeQuery("select EMAIL_ONG, SENHA_ONG from ong")){
+            ResultSet resultado = select.executeQuery("select email_ong, senha_ong from ong")){
             while (resultado.next()) {
-                Login recuperado = new Login(
-                    resultado.getString("EMAIL"),
-                    resultado.getString("SENHA"));
+                DadosDeLogin recuperado = new DadosDeLogin(
+                    resultado.getString("email_ong"),
+                    resultado.getString("senha_ong"));
                 todas.add(recuperado);
             }
         } catch (Exception e) {
