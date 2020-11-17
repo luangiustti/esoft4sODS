@@ -1,4 +1,4 @@
-package AepOds.Login;
+package AepOds.Login.ValueObject;
 
 public class DadosDeLogin {
     private String email;

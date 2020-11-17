@@ -2,6 +2,8 @@ package AepOds.Login;
 
 import java.util.List;
 
+import AepOds.Login.ValueObject.DadosDeLogin;
+
 public class Login {
     private String email;
     private String senha;
@@ -23,6 +25,13 @@ public class Login {
             }
         }
         this.senha = senha;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public String getSenha() {
+        return senha;
     }
 
     public String getTipoDeLogin() {

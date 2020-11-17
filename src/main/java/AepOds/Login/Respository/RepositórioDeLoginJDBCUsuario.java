@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import AepOds.Login.DadosDeLogin;
+import AepOds.Login.ValueObject.DadosDeLogin;
 
 public class RepositórioDeLoginJDBCUsuario implements RepositórioDeLoginUsuario{
     private Connection conexão;
